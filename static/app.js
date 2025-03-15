@@ -60,11 +60,44 @@ $(document).ready(function () {
 			data.map((song, index) => {
 				if (index == 0) {
 					count == 1
-						? $(`<h2>${count} Result Found</h2>`).appendTo("#results-list")
-						: $(`<h2>${count} Results Found</h2>`).appendTo("#results-list");
+						? $(`<h2 class="align-left">${count} Result Found</h2>`).appendTo(
+								"#results-list"
+						  )
+						: $(`<h2 class="align-left">${count} Results Found</h2>`).appendTo(
+								"#results-list"
+						  );
 				}
+				let coverList =
+					song.covers.length > 0
+						? song.covers
+								.map(
+									(cover, index) =>
+										`<p><span class="cover-artist">${
+											cover.artist
+										}</span> - ${cover.genre.join(", ")}</p>`
+								)
+								.join("")
+						: "<p>No covers available</p>";
+
 				$(`
-                <a href="/view/${song.id}"><p>${song.title}</p><a>
+				<div class="result-item">
+				<a href="/view/${song.id}">
+				<div class="larger-vinyl-disc">
+                                <div class="vinyl-label" style="background-image: url('${
+																	song.album_cover
+																}')"></div>
+                            </div></a>
+                            
+                            <div class="song-details">
+                                <h3>${song.title}</h3>
+                                <p><b>Artist:</b> ${song.artist}</p>
+                                <p><b>Genre:</b> ${song.genre.join(", ")}</p>
+                                <div class="cover-section">
+                                    <h4>Cover Versions:</h4>
+                                    ${coverList}
+                                </div>
+                            </div>
+                        </div>
             `).appendTo("#results-list");
 			});
 		}
@@ -189,9 +222,9 @@ $(document).ready(function () {
 		setVinyl($(this).attr("id"));
 	});
 	$(".album-sleeve").on("dblclick", function () {
-		let albumId = $(this).attr("id");
-		if (albumId) {
-			window.location.href = `view/${albumId}`;
+		let songId = $(this).attr("id");
+		if (songId) {
+			window.location.href = `view/${songId}`;
 		} else {
 			console.warn("Element does not have an ID!");
 		}
