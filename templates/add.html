@@ -1,0 +1,121 @@
+{% extends "layout.html" %} {% block body_id %}add-page{% endblock %} {% block
+content %}
+<div class="add-container">
+	<h1 class="add-heading">Add a New Song</h1>
+
+	<form
+		id="addForm"
+		class="add-form"
+		action="{{ url_for('create_cover') }}"
+		method="POST">
+		<label for="add-title" class="add-label">Song Title</label>
+		<input
+			type="text"
+			id="add-title"
+			name="title"
+			class="add-input"
+			placeholder="e.g., Bohemian Rhapsody" />
+
+		<label for="add-artist" class="add-label">Artist</label>
+		<input
+			type="text"
+			id="add-artist"
+			name="artist"
+			class="add-input"
+			placeholder="e.g., Queen" />
+
+		<label for="add-album" class="add-label">Album</label>
+		<input
+			type="text"
+			id="add-album"
+			name="album"
+			class="add-input"
+			placeholder="e.g., A Night at the Opera" />
+
+		<label for="add-album-cover" class="add-label">Album Cover URL</label>
+		<input
+			type="text"
+			id="add-album-cover"
+			name="album_cover"
+			class="add-input"
+			placeholder="Paste a valid image URL" />
+
+		<label for="add-artist-picture" class="add-label">Artist Picture URL</label>
+		<input
+			type="text"
+			id="add-artist-picture"
+			name="artist_picture"
+			class="add-input"
+			placeholder="Paste a valid image URL" />
+
+		<label for="add-streams" class="add-label">Spotify Streams</label>
+		<input
+			type="number"
+			id="add-streams"
+			name="total_streams"
+			class="add-input"
+			placeholder="e.g., 2500000000 (just numbers)" />
+
+		<label for="add-genre" class="add-label">Genre</label>
+		<input
+			type="text"
+			id="add-genre"
+			name="genre"
+			class="add-input"
+			placeholder="e.g., Rock (only one genre)" />
+
+		<label for="add-audio" class="add-label">Spotify Audio URL</label>
+		<input
+			type="text"
+			id="add-audio"
+			name="audio"
+			class="add-input"
+			placeholder="Paste the song's Spotify URL" />
+
+		<label for="add-song-analysis" class="add-label">Song Analysis</label>
+		<textarea
+			id="add-song-analysis"
+			name="song_analysis"
+			class="add-input"
+			placeholder="Write a short description of the song"></textarea>
+
+		<hr />
+
+		<h3 class="cover-section-title">Cover Information</h3>
+		<p class="cover-description">
+			Fill in details about a single cover version of this song.
+		</p>
+
+		<label for="add-cover-artist" class="add-label">Cover Artist</label>
+		<input
+			type="text"
+			id="add-cover-artist"
+			name="cover_artist"
+			class="add-input"
+			placeholder="e.g., Panic! At The Disco" />
+
+		<label for="add-cover-genre" class="add-label">Cover Genre</label>
+		<input
+			type="text"
+			id="add-cover-genre"
+			name="cover_genre"
+			class="add-input"
+			placeholder="e.g., Alternative Rock (only one genre)" />
+
+		<label for="add-cover-audio" class="add-label">Cover Audio URL</label>
+		<input
+			type="text"
+			id="add-cover-audio"
+			name="cover_audio"
+			class="add-input"
+			placeholder="Paste a YouTube or streaming link" />
+
+		<button type="submit" class="add-button">Submit</button>
+	</form>
+
+	<div class="add-success-message" id="addSuccessMessage" style="display: none">
+		New song added!
+		<a href="#" class="add-view-link" id="addViewItem">View it here</a>
+	</div>
+</div>
+{% endblock %}

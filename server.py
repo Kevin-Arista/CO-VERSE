@@ -54,5 +54,10 @@ def search_query():
     )
 
 
+@app.route("/add", methods=["GET", "POST"])
+def create_cover():
+    return render_template("add.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
