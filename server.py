@@ -22,8 +22,10 @@ def view_id(id=None):
     return render_template("view.html", data=[obj for obj in data if obj["id"] == id])
 
 
-@app.route("/search/<query>", methods=["GET"])
-def search_query(query=None):
+@app.route("/search", methods=["GET"])
+def search_query():
+    query = request.args.get("query-input", "")
+
     def appearsIn(sub, list):
         found = False
         if isinstance(list[0], str):
@@ -40,11 +42,11 @@ def search_query(query=None):
         song
         for song in data
         if (
-            (unquote(query).lower()) in (song["title"].lower())
-            or (unquote(query).lower()) in (song["artist"].lower())
-            or (unquote(query).lower()) in (song["album"].lower())
-            or appearsIn(unquote(query).lower(), song["genre"])
-            or appearsIn(unquote(query).lower(), song["covers"])
+            ((query).lower()) in (song["title"].lower())
+            or ((query).lower()) in (song["artist"].lower())
+            or ((query).lower()) in (song["album"].lower())
+            or appearsIn((query).lower(), song["genre"])
+            or appearsIn((query).lower(), song["covers"])
         )
     ]
     return render_template(

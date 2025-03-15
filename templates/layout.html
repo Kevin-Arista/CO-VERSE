@@ -50,13 +50,19 @@
 					id="navbarNav">
 					<div class="navbar-nav d-flex align-items-center">
 						<!-- Search Form (Wrap to prevent stacking) -->
-						<form id="target" class="d-flex">
+						<!-- <form id="target" class="d-flex"> -->
+						<form
+							id="searchForm"
+							action="{{url_for('search_query')}}"
+							method="GET">
 							<input
 								class="form-control me-2"
-								id="form-input"
+								id="query-input"
+								name="query-input"
 								type="search"
 								placeholder="Search title, genre, artist" />
 							<button class="btn btn-warning" type="submit">Search</button>
+							<p id="error-message" class="search-error-msg">Invalid.</p>
 						</form>
 					</div>
 				</div>

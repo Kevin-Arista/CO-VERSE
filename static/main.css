@@ -28,6 +28,10 @@ hr {
 	font-size: 40px;
 	text-align: center;
 }
+.search-error-msg {
+	color: red;
+	display: none;
+}
 
 /* HOME PAGE */
 .home-central-container {

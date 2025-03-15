@@ -152,39 +152,34 @@ $(document).ready(function () {
 		);
 	}
 
-	function search_request(user_input) {
-		window.location.href = "/search/" + encodeURIComponent(user_input);
-	}
-
 	function valid(input) {
-		if (input.length > 0 && input.trim().length == 0) {
-			return -1;
-		} else if (input == "") {
-			return 0;
-		} else {
-			return 1;
+		let trimmedInput = input.trim();
+		if (trimmedInput.length === 0) {
+			return false; // Invalid: Empty or only spaces
 		}
+		return true; // Valid: Has meaningful content
 	}
 
-	$("#target").on("submit", function (event) {
-		event.preventDefault();
-		input = $("#form-input").val();
-		if (!valid(input)) {
-			return;
+	$("#searchForm").submit(function (event) {
+		let query = $("#query-input").val();
+		if (valid(query)) {
+			$("#error-message").hide();
+		} else {
+			event.preventDefault(); // Stop form submission
+			$("#error-message").text("Invalid.").show();
+			$("#query-input").val();
 		}
-		search_request(input);
 	});
 
-	$("#form-input").keypress(function (event) {
+	$("#query-input").keypress(function (event) {
+		let query = $("#query-input").val();
 		if (event.which === 13) {
-			event.preventDefault();
-			input = $("#form-input").val();
-			if (!valid(input)) {
-				return;
-			} else if (valid(input) < 0) {
-				$("#form-input").val("");
+			if (valid(query)) {
+				$("#error-message").hide();
 			} else {
-				search_request(input);
+				event.preventDefault(); // Stop form submission
+				$("#error-message").text("Invalid.").show();
+				$("#query-input").val("");
 			}
 		}
 	});
