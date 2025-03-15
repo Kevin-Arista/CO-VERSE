@@ -3,53 +3,40 @@
 
 $(document).ready(function () {
 	function display_covers(data) {
-		data.map((song, index) => {
+		data.map((song) => {
 			$(`<div class="card text-center main-card">
-    <div class="card-header">
-        <h3>
-            ${song.title} 
-        </h3>
-        <h6>
-            ${song.album} 
-        </h6>
-        <hr/>
-        <iframe class="main-iframe-sp" src="${spotifyEmbed(song.audio)}"
-            frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-        </iframe>
-        <p>${song.genre.map((genre, idnex) => {
-					return `<span> [${genre}] </span>`;
-				})}</p>
-
-    </div>
-    <div class="card-body">
-        <img class="card-image" src="${song.artist_picture}">
-        <h4 class="card-title">${song.artist}</h4>
-        <p class="card-text">${song.song_analysis}</p>
-        <hr/>
-        <h5>CO-VERSES</h5>
-        ${song.covers.map((cover, index) => {
-					return `
-                                        <br/>
-                                        <p>----------${
-																					cover.artist
-																				}-----------</p>
-                                        <iframe class="main-frame-yt" src="${youtubeEmbed(
-																					cover.audio
-																				)}" 
-                                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                        </iframe>
-                                        <p>${cover.genre.map((genre, index) => {
-																					return `
-                                            <span> [${genre}] </span>
-                                        `;
-																				})}</p>
-                                        `;
-				})}
-    <div class="card-footer text-muted">
-        ${song.total_streams.toLocaleString()} streams on Spotify!
-    </div>
-</div>
-`).appendTo($("#featured-list"));
+				<div class="card-header">
+					<h3>${song.title}</h3>
+					<h6>${song.album}</h6>
+					<hr/>
+					<iframe class="main-iframe-sp" src="${spotifyEmbed(song.audio)}"
+						frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+					</iframe>
+					<p>${song.genre.map((genre) => `<span> [${genre}] </span>`).join("")}</p>
+				</div>
+				<div class="card-body">
+					<img class="card-image" src="${song.artist_picture}">
+					<h4 class="card-title">${song.artist}</h4>
+					<p class="card-text">${song.song_analysis}</p>
+					<hr/>
+					<h5>CO-VERSES</h5>
+					${song.covers
+						.map(
+							(cover) => `
+						<br/>
+						<p class="cover-artist">--- ${cover.artist} ---</p>
+						<a href="${
+							cover.audio
+						}" class="cover-link" target="_blank">🎧 Listen to Cover</a>
+						<p>${cover.genre.map((genre) => `<span> [${genre}] </span>`).join("")}</p>
+					`
+						)
+						.join("")}
+					<div class="card-footer text-muted">
+						${song.total_streams.toLocaleString()} streams on Spotify!
+					</div>
+				</div>
+			</div>`).appendTo($("#featured-list"));
 		});
 	}
 
