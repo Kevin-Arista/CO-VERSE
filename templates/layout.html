@@ -1,0 +1,71 @@
+<!-- Kevin Arista Solis (ka2902) -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="data:," />
+
+		<!-- jquery -->
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+		<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+
+		<title>CO-VERSE</title>
+	</head>
+	<body id="{% block body_id %}{% endblock %}">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container-fluid">
+				<!-- Left Side: Brand Name -->
+				<a class="navbar-brand bungee-shade-regular" href="/">C0-VERSE</a>
+
+				<!-- Navbar Toggler (Visible on Small Screens) -->
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Right-Side Navbar Content -->
+				<div
+					class="collapse navbar-collapse justify-content-end"
+					id="navbarNav">
+					<div class="navbar-nav d-flex align-items-center">
+						<!-- Search Form (Wrap to prevent stacking) -->
+						<form id="target" class="d-flex">
+							<input
+								class="form-control me-2"
+								id="form-input"
+								type="search"
+								placeholder="Search title, genre, artist" />
+							<button class="btn btn-warning" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container" id="main-container">
+			{% block content %} {% endblock %}
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- Kevin Arista Solis (ka2902) -->
+
+{% extends "layout.html" %} {% block body_id %}view-page{%endblock %} {% block
+content %}
+
+<script
+	type="text/javascript"
+	src="{{ url_for('static', filename = 'app.js') }}"></script>
+
+<script>
+	let data = {{data|tojson}}
+</script>
+
+<div id="featured-list"></div>
+
+{% endblock %}

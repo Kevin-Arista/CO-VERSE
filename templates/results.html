@@ -1,0 +1,17 @@
+<!-- Kevin Arista Solis (ka2902) -->
+{% extends "layout.html" %} {% block body_id %}results-page{% endblock %}{%
+block content %}
+
+<script
+	type="text/javascript"
+	src="{{ url_for('static', filename = 'app.js') }}"></script>
+
+<script>
+	let data = {{results|tojson}}
+	let count = {{count}}
+</script>
+
+<h1>Search Results for "{{query}}"</h1>
+<div id="results-list"></div>
+
+{% endblock %}

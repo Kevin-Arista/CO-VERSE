@@ -1,0 +1,66 @@
+<!-- Kevin Arista Solis (ka2902) -->
+{% extends "layout.html" %} {% block body_id %}home-page{% endblock %}{% block
+content %}
+
+<script
+	type="text/javascript"
+	src="{{ url_for('static', filename = 'app.js') }}"></script>
+
+<script>
+	let data = {{data|tojson}}
+</script>
+
+<div class="home-central-container">
+	<!-- Spotify Player Embed -->
+	<iframe
+		id="spotifyPlayer"
+		class="hide"
+		style="border-radius: 12px"
+		src=""
+		width="100%"
+		height="80"
+		frameborder="0"
+		allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+		loading="lazy"></iframe>
+
+	<br />
+
+	<!-- Vinyl Player UI -->
+	<div class="player-container">
+		<h1 class="bungee-shade-regular home-heading">CO-VERSE</h1>
+		<p class="home-heading-description">Pick a Song, Explore it's Covers!</p>
+		<hr />
+		<div class="vinyl-player">
+			<div class="lcd-screen">
+				<marquee class="marq" direction="left" loop="">
+					<div class="row">
+						<span id="lcd-title">Title</span>
+					</div>
+
+					<div class="row">
+						<p>by: &nbsp;</p>
+						<span id="lcd-artist">Artist</span>
+					</div>
+				</marquee>
+			</div>
+			<div class="vinyl-disc" id="vinyl">
+				<div id="vinyl-label"></div>
+			</div>
+			<div class="needle">
+				<div class="needle-head"></div>
+			</div>
+			<div class="buttons row">
+				<i class="bi bi-play-fill button" id="play"></i>
+				<i class="bi bi-stop-fill button" id="stop"></i>
+				<a id="info" href=""><i class="bi bi-info-circle-fill button"></i></a>
+			</div>
+		</div>
+
+		<h1 class="bungee-shade-regular home-subheading">TOP TRACKS</h1>
+		<p class="home-subheading-description">most covered</p>
+		<div class="album-shelf"></div>
+	</div>
+</div>
+<div id="featured-list"></div>
+
+{% endblock %}
