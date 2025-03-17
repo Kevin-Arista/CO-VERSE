@@ -1,0 +1,232 @@
+[
+	{
+		"id": "1",
+		"title": "Bags",
+		"album": "Immunity",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/5/56/Clairo_-_Immunity.png",
+		"artist": "Clairo",
+		"genre": ["bedroom pop"],
+		"artist_picture": "https://media.newyorker.com/photos/668dabf86b5fa018becc0c7d/master/w_1600,c_limit/r44564.jpg",
+		"audio": "https://open.spotify.com/track/6UFivO2zqqPFPoQYsEMuCc?si=90f05dd2f80d43d2",
+		"song_analysis": "Bags is an introspective indie pop song that explores the complexities of unspoken emotions and unrequited love. Clairo\u2019s soft, airy vocals paired with the lo-fi, melancholic instrumentation create an atmosphere of quiet longing. The lyrics describe the nervous tension of navigating feelings for someone, unsure of whether they are reciprocated. The song\u2019s understated production\u2014featuring dreamy guitar riffs and subtle synths\u2014mirrors its emotionally restrained yet deeply personal narrative. As one of Clairo\u2019s breakthrough tracks, Bags cemented her place in the indie music scene, earning praise for its sincerity and vulnerability.",
+		"total_streams": 419884825,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Dominic Fike",
+				"genre": ["alternative", "indie pop"],
+				"audio": "https://youtu.be/7WyrPH0JJF0?si=WaovdqsLDuYLR-fi"
+			},
+			{
+				"id": "2",
+				"artist": "Chris Lanzon",
+				"genre": ["bedroom pop"],
+				"audio": "https://youtu.be/65j6hWlgnt8?si=vCjVJiuEFfBmcN_x"
+			}
+		]
+	},
+	{
+		"id": "2",
+		"title": "Please Please Please",
+		"album": "Short n' Sweet",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/f/fd/Short_n%27_Sweet_-_Sabrina_Carpenter.png",
+		"artist": "Sabrina Carpenter",
+		"genre": ["pop"],
+		"artist_picture": "https://www.hollywoodreporter.com/wp-content/uploads/2024/06/GettyImages-2148466224-e1719254543794.jpg?crop=0px%2C0px%2C3472px%2C1780px&resize=1000%2C563",
+		"audio": "https://open.spotify.com/track/0lBwoEOqZNwm07Pd8Hwj3L?si=35e55d84c0984e77",
+		"song_analysis": "Please Please Please is a heartfelt plea for emotional security, reflecting themes of love, trust, and vulnerability. Sabrina Carpenter\u2019s soft yet expressive vocals highlight the anxiety of wanting reassurance in a relationship. The song blends indie pop and R&B elements, creating a dreamy yet melancholic atmosphere. Its relatable lyrics capture the fear of being let down, making it resonate with listeners navigating romantic uncertainty. With its intimate production and raw emotional depth, Please Please Please solidifies Carpenter\u2019s reputation for crafting deeply personal, evocative music.",
+		"total_streams": 1283876825,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Omar Apollo",
+				"genre": ["nortena"],
+				"audio": "https://youtu.be/7WyrPH0JJF0?si=WaovdqsLDuYLR-fi"
+			}
+		]
+	},
+	{
+		"id": "3",
+		"title": "Harder, Better, Faster, Stronger",
+		"album": "Discovery",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png",
+		"artist": "Daft Punk",
+		"genre": ["edm"],
+		"artist_picture": "https://concord.com/wp-content/uploads/2018/02/daft-punk-banner-new.jpg",
+		"audio": "https://open.spotify.com/track/5W3cjX2J3tjhG8zb6u0qHn?si=f514127109da440e",
+		"song_analysis": "Harder, Better, Faster, Stronger is an electronic masterpiece that showcases Daft Punk\u2019s ability to turn simple, repetitive lyrics into a hypnotic anthem. Built around a chopped-up sample of Cola Bottle Baby by Edwin Birdsong, the track transforms funk elements into a futuristic robotic groove. The song\u2019s vocoder-heavy vocals reinforce its mechanical theme, making it a staple in electronic and dance music. Its influence extended beyond the EDM scene, with Kanye West famously sampling it for his hit Stronger in 2007. Over two decades after its release, the track remains an iconic symbol of Daft Punk\u2019s impact on electronic music and digital production.",
+		"total_streams": 402281771,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Ye",
+				"genre": ["hip-hop", "rap"],
+				"audio": "https://youtu.be/3mwiO5st-us?si=FTIYOuIXKLhl5yCb"
+			}
+		]
+	},
+	{
+		"id": "4",
+		"title": "Welcome to the Black Parade",
+		"album": "The Black Parade",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/e/ea/Blackparadecover.jpg",
+		"artist": "My Chemical Romance",
+		"genre": ["Rock"],
+		"artist_picture": "https://deadline.com/wp-content/uploads/2024/12/mcr.jpg?w=681&h=383&crop=1",
+		"audio": "https://open.spotify.com/track/5wQnmLuC1W7ATsArWACrgW?si=6348922418ad43e9",
+		"song_analysis": "Welcome to the Black Parade is a rock opera anthem that tells the story of 'The Patient', a character reflecting on life and death. Opening with a somber piano melody, the song gradually builds into a powerful blend of alternative rock and punk, embodying the theatrical style of My Chemical Romance. The lyrics evoke themes of loss, legacy, and perseverance, resonating deeply with fans who see the song as a generational rallying cry. Gerard Way\u2019s impassioned vocals and the grand, marching-band-style instrumentation contribute to its cinematic feel. As the defining track of The Black Parade album, it solidified My Chemical Romance\u2019s place as one of the most influential rock bands of the 2000s.",
+		"total_streams": 867882834,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "EZ Band",
+				"genre": ["nortena"],
+				"audio": "https://youtu.be/795QD6g68EI?si=ns5uxhmhD9IAE1V7"
+			}
+		]
+	},
+	{
+		"id": "5",
+		"title": "Bohemian Rhapsody",
+		"album": "Stone Cold Classics",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/4/45/QUEENSTONECOLDCLASSICS.jpg",
+		"artist": "Queen",
+		"genre": [
+			"Progressive Rock",
+			"Hard Rock",
+			"Opera Rock",
+			"Art Rock",
+			"Ballad"
+		],
+		"artist_picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg/440px-Queen_A_Night_At_The_Opera_%281975_Elektra_publicity_photo_02%29.jpg",
+		"audio": "https://open.spotify.com/track/6l8GvAyoUZwWDgF1e4822w?si=2305b045832f4448",
+		"song_analysis": "Bohemian Rhapsody is a six-minute epic that blends rock, opera, and ballad elements, defying traditional song structures. The song's cryptic lyrics tell a dramatic tale of guilt, fate, and existential crisis, leading many to speculate about its deeper meanings. Queen's meticulous studio production, featuring over 180 vocal overdubs, creates the song\u2019s signature operatic section. The track\u2019s hard rock climax, with Brian May\u2019s soaring guitar solo, contrasts its melancholic opening and theatrical middle section. Despite initial doubts from record labels, the song became a timeless classic, achieving renewed fame through films like Wayne\u2019s World and Bohemian Rhapsody (2018).",
+		"total_streams": 2721944044,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Panic! At The Disco",
+				"genre": ["Hard Rock", "Opera Rock", "Art Rock"],
+				"audio": "https://youtu.be/irK0Su5SE2Y?si=U3fo9zamw0cE9OMz"
+			},
+			{
+				"id": "2",
+				"artist": "Marc Mateo",
+				"genre": ["acoustic"],
+				"audio": "https://youtu.be/QkCxE2Lh458?si=6gzCcz4CnQi67pL2"
+			}
+		]
+	},
+	{
+		"id": "6",
+		"title": "Espresso",
+		"album": "Short n' Sweet",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/f/fd/Short_n%27_Sweet_-_Sabrina_Carpenter.png",
+		"artist": "Sabrina Carpenter",
+		"genre": ["pop"],
+		"artist_picture": "https://www.hollywoodreporter.com/wp-content/uploads/2024/06/GettyImages-2148466224-e1719254543794.jpg?crop=0px%2C0px%2C3472px%2C1780px&resize=1000%2C563",
+		"audio": "https://open.spotify.com/track/2HRqTpkrJO5ggZyyK6NPWz?si=13d951226f804bc4",
+		"song_analysis": "Espresso is a smooth and playful pop track that showcases Sabrina Carpenter\u2019s signature charm and wit. The song features infectious melodies and breezy production, creating a lighthearted yet confident vibe. Lyrically, it plays with themes of attraction and self-assurance, with clever wordplay that adds to its flirty and fun nature. The production blends elements of modern pop and R&B, complementing Carpenter\u2019s effortless vocal delivery. With its catchy hooks and easygoing energy, Espresso feels like a summer anthem, highlighting Carpenter\u2019s evolving artistry and charisma.",
+		"total_streams": 2000577215,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Good Neighbours",
+				"genre": ["indie pop"],
+				"audio": "https://youtu.be/JOfHl-l-75Q?si=bgJAGfzAefX4xZOx"
+			},
+			{
+				"id": "2",
+				"artist": "Wallows",
+				"genre": ["bedroom pop"],
+				"audio": "https://youtu.be/Xi7ZRBfpkz4?si=Dzu-Hwql1vLOz2b_"
+			}
+		]
+	},
+	{
+		"id": "7",
+		"title": "On Melancholy Hill",
+		"album": "Plastic Beach",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/d/d1/Plasticbeach452.jpg",
+		"artist": "Gorillaz",
+		"genre": ["Synth-Pop", "Indie Pop", "Alternative Rock", "Dream Pop"],
+		"artist_picture": "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*0DMI2uD5kxuRbabxQzuecw.jpeg",
+		"audio": "https://open.spotify.com/track/0q6LuUqGLUiCPP1cbdwFs3?si=36c9661fcc584d9f",
+		"song_analysis": "On Melancholy Hill is a dreamy synth-pop track that evokes feelings of nostalgia, longing, and quiet introspection. The song\u2019s ethereal production, characterized by warm synths and a steady beat, creates a hypnotic, almost lullaby-like atmosphere. Damon Albarn\u2019s melancholic yet soothing vocals reinforce the theme of seeking solace in an isolated, almost surreal place. Lyrically, the song presents a sense of escapism, where the 'melancholy hill' symbolizes a retreat from the chaos of reality. As one of the standout tracks from Plastic Beach, it embodies Gorillaz\u2019s unique ability to merge electronic and indie influences into emotionally resonant music.",
+		"total_streams": 715457868,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Frank Watkinson",
+				"genre": ["acoustic"],
+				"audio": "https://youtu.be/8OvCAeWS7WA?si=4iDgN73PzKahfIqL"
+			}
+		]
+	},
+	{
+		"id": "8",
+		"title": "Cities",
+		"album": "Where U Are",
+		"album_cover": "https://f4.bcbits.com/img/a1926812872_16.jpg",
+		"artist": "Throttle",
+		"genre": ["edm"],
+		"artist_picture": "https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2016/02/12011314/xlMljmtQKf6paAQOjKViHVp8cB3fki8OF0kG046I-972x597.jpeg",
+		"audio": "https://open.spotify.com/track/6t67COokESOCeqHkMNroSu?si=b0f0cdc1070a43ab",
+		"song_analysis": "Cities by Throttle is an uplifting and energetic track that blends elements of house, funk, and electronic dance music. The song features groovy basslines, vibrant synths, and crisp percussion, capturing the excitement and movement of urban life. Its instrumental-driven nature, with minimal lyrics, allows the dynamic composition to tell a story through shifting beats and textures. The track\u2019s seamless fusion of classic funk influences with modern electronic production showcases Throttle\u2019s signature \u201cdirty disco\u201d style. Cities stands out as a feel-good anthem, evoking the thrill of exploration and adventure in a bustling metropolis.",
+		"total_streams": 24722825,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Throttle",
+				"genre": ["acoustic"],
+				"audio": "https://youtu.be/pGpHARTcd0s?si=S5aMWX7HPrm5dPnP"
+			}
+		]
+	},
+	{
+		"id": "9",
+		"title": "Daft Pretty Boys",
+		"album": "Disappear Here",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/0/0a/BadSuns_DisappearHere_1500.jpg",
+		"artist": "Bad Suns",
+		"genre": ["indie pop"],
+		"artist_picture": "https://www.livenation.com/_next/image?url=https%3A%2F%2Fs1.ticketm.net%2Fdam%2Fa%2F577%2F2ef9f93a-6a3e-455d-a84c-cee284f3b577_TABLET_LANDSCAPE_LARGE_16_9.jpg&w=1319&q=70",
+		"audio": "https://open.spotify.com/track/2ZRQixbe1MCJxpcO96Zj1y?si=61c34815cb014361",
+		"song_analysis": "Daft Pretty Boys is an infectious indie rock track that explores themes of deception, self-worth, and disillusionment in relationships. The song\u2019s upbeat tempo and shimmering guitar riffs contrast with its introspective lyrics, creating a dynamic push-and-pull between sound and meaning. Lead singer Christo Bowman\u2019s smooth vocals carry a mix of frustration and resignation as he reflects on being overlooked in favor of superficial charm. The track\u2019s polished production, featuring crisp percussion and soaring melodies, enhances its anthemic quality, making it both danceable and emotionally resonant. As a standout from the Disappear Here album, Daft Pretty Boys captures the band\u2019s signature blend of nostalgic \u201880s influences and modern indie rock energy.",
+		"total_streams": 117735525,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Bad Suns",
+				"genre": ["acoustic"],
+				"audio": "https://youtu.be/SoO9KG-offw?si=ZVfhWcW-G2eDA0mJ"
+			}
+		]
+	},
+	{
+		"id": "10",
+		"title": "One More Time",
+		"album": "Discovery",
+		"album_cover": "https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png",
+		"artist": "Daft Punk",
+		"genre": ["edm"],
+		"artist_picture": "https://concord.com/wp-content/uploads/2018/02/daft-punk-banner-new.jpg",
+		"audio": "https://open.spotify.com/track/0DiWol3AO6WpXZgp0goxAV?si=8450ff28b9014b86",
+		"song_analysis": "Released in 2000, 'One More Time' by Daft Punk is one of the most iconic electronic dance music tracks of all time. The song features a heavily processed vocal line, a signature of the French duo's house music style. It became an anthem in clubs worldwide and played a major role in popularizing electronic music in the early 2000s. The track was also a key part of Daft Punk\u2019s concept album 'Discovery,' which was later adapted into the animated film 'Interstella 5555.' Even decades after its release, 'One More Time' continues to influence electronic and pop artists alike.",
+		"total_streams": 692478149,
+		"covers": [
+			{
+				"id": "1",
+				"artist": "Pentatonix",
+				"genre": ["a cappella"],
+				"audio": "https://youtu.be/3MteSlpxCpo?si=4lf4aWCtpndZkXYE"
+			},
+			{
+				"id": "2",
+				"artist": "CHAY Sounds",
+				"genre": ["edm"],
+				"audio": "https://youtu.be/vwJ4_jj0MSA?si=ZhrjiU79NitOrgLE"
+			}
+		]
+	}
+]
