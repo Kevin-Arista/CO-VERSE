@@ -69,9 +69,8 @@ def create_cover():
         data = []
         with open("db.json", "r") as file:
             data = json.load(file)
-
+        idEdited = len(data)
         if request.form.get("existingSong", "0") != "0":
-            print(request.form.get("existingSong", "0"))
             song = modSong = [
                 song for song in data if song["id"] == request.form.get("existingSong")
             ][0]
@@ -86,17 +85,19 @@ def create_cover():
             }
             modSong["covers"].append(cover)
             data[data.index(song)] = modSong
+            idEdited = song["id"]
             with open("db.json", "w") as file:
                 json.dump(data, file, indent=4)
 
         else:
-            print("new entry!")
             title = request.form.get("title", "")
             album = request.form.get("album", "")
             album_cover = request.form.get("album_cover", "")
             artist = request.form.get("artist", "")
             # list
-            genres = (request.form.get("genre", "")).split(",")
+            genres = [
+                genre.strip() for genre in (request.form.get("genre", "")).split(",")
+            ]
             artist_picture = request.form.get("artist_picture", "")
             audio = request.form.get("audio", "")
             song_analysis = request.form.get("song_analysis", "")
@@ -104,7 +105,10 @@ def create_cover():
             total_streams = int(request.form.get("total_streams", 0))
             # compile into dictionary
             cover_artist = request.form.get("cover_artist", "")
-            cover_genre = (request.form.get("cover_genre", "")).split(",")
+            cover_genre = [
+                genre.strip()
+                for genre in (request.form.get("cover_genre", "")).split(",")
+            ]
             cover_audio = request.form.get("cover_audio", "")
             cover = {
                 "id": 1,
@@ -112,9 +116,12 @@ def create_cover():
                 "genre": cover_genre,
                 "audio": cover_audio,
             }
+            cover_list = []
+            cover_list.append(cover)
+            idEdited = str(len(data) + 1)
             data.append(
                 {
-                    "id": len(data),
+                    "id": idEdited,
                     "title": title,
                     "album": album,
                     "album_cover": album_cover,
@@ -124,7 +131,7 @@ def create_cover():
                     "audio": audio,
                     "song_analysis": song_analysis,
                     "total_streams": total_streams,
-                    "covers": cover,
+                    "covers": cover_list,
                 }
             )
             with open("db.json", "w") as file:
