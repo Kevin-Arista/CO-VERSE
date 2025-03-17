@@ -1,83 +1,96 @@
 {% extends "layout.html" %} {% block body_id %}add-page{% endblock %} {% block
 content %}
-<div class="add-container">
-	<h1 class="add-heading">Add a New Song</h1>
 
+<script
+	type="text/javascript"
+	src="{{ url_for('static', filename = 'app.js') }}"></script>
+
+<script>
+	let data = {{data|tojson}}
+</script>
+<h1 class="add-heading bungee-shade-regular">Add a New Song</h1>
+
+<div class="add-container">
 	<form
 		id="addForm"
 		class="add-form"
 		action="{{ url_for('create_cover') }}"
 		method="POST">
-		<label for="add-title" class="add-label">Song Title</label>
+		<p class="cover-description">
+			Can't find a song? Song hasn't been covered yet? Input information below!
+		</p>
+		<label for="add-title" class="add-label-existing">Song Title</label>
 		<input
 			type="text"
 			id="add-title"
 			name="title"
 			class="add-input"
-			placeholder="e.g., Bohemian Rhapsody" />
+			placeholder="e.g., Bags" />
+		<small class="error-message">Title cannot be empty.</small>
 
-		<label for="add-artist" class="add-label">Artist</label>
+		<label for="add-artist" class="add-label-existing">Artist</label>
 		<input
 			type="text"
 			id="add-artist"
 			name="artist"
 			class="add-input"
-			placeholder="e.g., Queen" />
+			placeholder="e.g., Clairo" />
+		<small class="error-message">Artist cannot be empty.</small>
 
-		<label for="add-album" class="add-label">Album</label>
+		<label for="add-album" class="add-label-existing">Album</label>
 		<input
 			type="text"
 			id="add-album"
 			name="album"
 			class="add-input"
-			placeholder="e.g., A Night at the Opera" />
+			placeholder="e.g., Immunity" />
+		<small class="error-message">Album cannot be empty.</small>
 
-		<label for="add-album-cover" class="add-label">Album Cover URL</label>
+		<label for="add-album-cover" class="add-label-existing">
+			Album Cover URL
+		</label>
 		<input
 			type="text"
 			id="add-album-cover"
 			name="album_cover"
 			class="add-input"
 			placeholder="Paste a valid image URL" />
+		<small class="error-message">Album cover cannot be empty.</small>
 
-		<label for="add-artist-picture" class="add-label">Artist Picture URL</label>
-		<input
-			type="text"
-			id="add-artist-picture"
-			name="artist_picture"
-			class="add-input"
-			placeholder="Paste a valid image URL" />
-
-		<label for="add-streams" class="add-label">Spotify Streams</label>
+		<label for="add-streams" class="add-label-existing">Spotify Streams</label>
 		<input
 			type="number"
 			id="add-streams"
 			name="total_streams"
 			class="add-input"
-			placeholder="e.g., 2500000000 (just numbers)" />
+			placeholder="e.g., 2500000000" />
+		<small class="error-message">Please enter a valid number of streams.</small>
 
-		<label for="add-genre" class="add-label">Genre</label>
+		<label for="add-genre" class="add-label-existing">
+			Genre (separate by comma)
+		</label>
 		<input
 			type="text"
 			id="add-genre"
 			name="genre"
 			class="add-input"
-			placeholder="e.g., Rock (only one genre)" />
+			placeholder="e.g., bedroom pop, pop" />
+		<small class="error-message">Genre cannot be empty.</small>
 
-		<label for="add-audio" class="add-label">Spotify Audio URL</label>
-		<input
-			type="text"
-			id="add-audio"
-			name="audio"
-			class="add-input"
-			placeholder="Paste the song's Spotify URL" />
+		<label for="add-audio" class="add-label-existing">Spotify Audio URL</label>
+		<input type="text" id="add-audio" name="audio" class="add-input"
+		placeholder="https://open.spotify.com/track/"" />
+		<small class="error-message">Audio URL cannot be empty.</small>
 
-		<label for="add-song-analysis" class="add-label">Song Analysis</label>
+		<label for="add-song-analysis" class="add-label-existing">
+			Song Analysis (300 words max)
+		</label>
 		<textarea
 			id="add-song-analysis"
 			name="song_analysis"
 			class="add-input"
 			placeholder="Write a short description of the song"></textarea>
+		<small class="error-message">Analysis cannot be empty.</small>
 
 		<hr />
 
@@ -92,15 +105,19 @@ content %}
 			id="add-cover-artist"
 			name="cover_artist"
 			class="add-input"
-			placeholder="e.g., Panic! At The Disco" />
+			placeholder="e.g., Dominic Fike" />
+		<small class="error-message">Cover artist cannot be empty.</small>
 
-		<label for="add-cover-genre" class="add-label">Cover Genre</label>
+		<label for="add-cover-genre" class="add-label">
+			Cover Genre (separate by comma)
+		</label>
 		<input
 			type="text"
 			id="add-cover-genre"
 			name="cover_genre"
 			class="add-input"
-			placeholder="e.g., Alternative Rock (only one genre)" />
+			placeholder="e.g., indie, alternative" />
+		<small class="error-message">Cover genre cannot be empty.</small>
 
 		<label for="add-cover-audio" class="add-label">Cover Audio URL</label>
 		<input
@@ -109,6 +126,7 @@ content %}
 			name="cover_audio"
 			class="add-input"
 			placeholder="Paste a YouTube or streaming link" />
+		<small class="error-message">Cover audio URL cannot be empty.</small>
 
 		<button type="submit" class="add-button">Submit</button>
 	</form>

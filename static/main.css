@@ -387,7 +387,7 @@ h5 {
 }
 
 /* Individual Cover Artist */
-.cover-artist {
+.main-card .cover-artist {
 	font-size: 16px;
 	font-weight: bold;
 	color: #d4c5ab;
@@ -421,4 +421,139 @@ h5 {
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+/* Add Form Container */
+.add-container {
+	max-width: 700px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: #8b5a2b; /* Warm brown, matches vinyl player */
+	border-radius: 12px;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+	border: 2px solid #5a3c2a;
+	text-align: center;
+}
+.add-container select {
+	width: 90%;
+}
+/* Heading */
+.add-heading {
+	text-align: center;
+	padding: auto;
+}
+
+/* Form Layout */
+.add-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Form Labels */
+.add-form label,
+.add-label-existing {
+	font-weight: bold;
+	color: #f4e7d1;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0.5rem;
+}
+
+/* Form Inputs & Textarea */
+.add-form input,
+.add-form textarea {
+	width: 90%;
+	padding: 12px;
+	margin-bottom: 1rem;
+	border: 2px solid #5a3c2a;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-family: Arial, sans-serif;
+	background-color: #d2b48c;
+	color: black;
+	transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+.add-form input:focus,
+.add-form textarea:focus {
+	border-color: #d49857;
+	box-shadow: 0 0 6px rgba(212, 152, 87, 0.5);
+	outline: none;
+}
+
+/* Submit Button */
+.add-button {
+	width: 90%;
+	padding: 12px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: radial-gradient(circle, #333 10%, #222 60%);
+	border: 3px solid #111;
+	box-shadow: 0 5px #111;
+	color: white;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.add-button:hover {
+	background-color: #b97d44;
+	transform: scale(1.05);
+}
+
+/* Success Message */
+.add-success-message {
+	margin-top: 1rem;
+	text-align: center;
+	color: #155724;
+	background-color: #d4edda;
+	padding: 1rem;
+	border: 1px solid #c3e6cb;
+	border-radius: 4px;
+}
+
+/* Success Message Link */
+.add-view-link {
+	color: #007bff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.add-view-link:hover {
+	text-decoration: underline;
+}
+
+/* Cover Section Styling */
+.cover-section-title {
+	font-size: 1.5rem;
+	color: #f4e7d1;
+	text-transform: uppercase;
+	margin-top: 2rem;
+}
+
+.cover-description {
+	font-size: 1rem;
+	color: #e3dac9;
+	margin-bottom: 1rem;
+	font-style: italic;
+}
+
+.error-message {
+	color: rgb(255, 111, 111);
+	font-size: 0.85rem;
+	margin-top: -8px;
+	margin-bottom: 10px;
+	display: none;
+	font-weight: bold;
+}
+
+/* Highlight invalid fields */
+.add-input:invalid,
+.add-input.error {
+	border: 2px solid red !important;
+	background-color: #ffe6e6; /* Light red background */
 }
