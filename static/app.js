@@ -15,7 +15,7 @@ $(document).ready(function () {
 					<p>${song.genre.map((genre) => `<span> [${genre}] </span>`).join("")}</p>
 				</div>
 				<div class="card-body">
-					<img class="card-image" src="${song.artist_picture}">
+					<img class="card-image" src="${song.artist_picture}" alt="artist_picture">
 					<h4 class="card-title">${song.artist}</h4>
 					<p class="card-text">${song.song_analysis}</p>
 					<hr/>
@@ -110,6 +110,18 @@ $(document).ready(function () {
 			});
 		}
 	}
+
+	function load_dropdown(data) {
+		$(` <label for="existingSong">Choose a Song:</label>
+    			<select name="existingSong" id="existingSong">
+				<option value="0">--Select Song--</option>
+				${data
+					.map((song, index) => {
+						return `<option value="${song.id}">${song.title}[${song.album}] by ${song.artist}</option>`;
+					})
+					.join("")}
+    			</select>`).prependTo("#addForm");
+	}
 	function changeAlbumCover(song) {
 		$("#vinyl-label").css({
 			"background-image": `url('${song.album_cover}')`,
@@ -176,8 +188,10 @@ $(document).ready(function () {
 		display_covers(data);
 	} else if (page_id == "home-page") {
 		display_featured(data);
-	} else {
+	} else if (page_id == "results-page") {
 		display_results(data, count);
+	} else {
+		load_dropdown(data);
 	}
 
 	// Play Button
