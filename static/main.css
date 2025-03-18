@@ -557,3 +557,94 @@ h5 {
 	border: 2px solid red !important;
 	background-color: #ffe6e6; /* Light red background */
 }
+
+/* Edit Form Styles */
+.edit-container {
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 20px;
+	background: #f9f9f9;
+	border-radius: 12px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border: 2px solid #5a3c2a;
+}
+
+.edit-heading {
+	text-align: center;
+}
+
+.edit-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.edit-label {
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 5px;
+}
+
+.edit-input {
+	padding: 10px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
+	background-color: #d2b48c; /* Light tan background to match theme */
+}
+
+.edit-input:focus {
+	border-color: #d49857;
+	box-shadow: 0 0 6px rgba(212, 152, 87, 0.5);
+	outline: none;
+}
+
+.edit-button,
+.discard-button {
+	padding: 12px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 48%;
+	margin-top: 10px;
+}
+
+.edit-button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	text-align: center;
+	display: inline-block;
+}
+
+.edit-button:hover {
+	background-color: #0056b3;
+}
+
+.discard-button {
+	background-color: #dc3545;
+	color: white;
+	border: none;
+	text-align: center;
+	display: inline-block;
+}
+
+.discard-button:hover {
+	background-color: #c82333;
+}
+
+/* Success Message */
+.edit-success-message {
+	margin-top: 1rem;
+	text-align: center;
+	color: #155724;
+	background-color: #d4edda;
+	padding: 1rem;
+	border: 1px solid #c3e6cb;
+	border-radius: 4px;
+}

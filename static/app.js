@@ -33,7 +33,9 @@ $(document).ready(function () {
 						)
 						.join("")}
 					<div class="card-footer text-muted">
-						${song.total_streams.toLocaleString()} streams on Spotify!
+						${song.total_streams.toLocaleString()} streams on Spotify! <div class="edit-button-container">
+    <a href="/edit/${song.id}" class="btn btn-secondary">Edit Song</a>
+  </div>
 					</div>
 				</div>
 			</div>`).appendTo($("#featured-list"));
@@ -109,6 +111,16 @@ $(document).ready(function () {
 				}
 			});
 		}
+	}
+	function fill_form() {
+		$("#edit-title").val(itemData.title);
+		$("#edit-artist").val(itemData.artist);
+		$("#edit-album").val(itemData.album);
+		$("#edit-album-cover").val(itemData.album_cover);
+		$("#edit-streams").val(itemData.total_streams);
+		$("#edit-genre").val(itemData.genre.join(", "));
+		$("#edit-audio").val(itemData.audio);
+		$("#edit-song-analysis").val(itemData.song_analysis);
 	}
 
 	function load_dropdown(data) {
@@ -204,8 +216,10 @@ $(document).ready(function () {
 		display_featured(data);
 	} else if (page_id == "results-page") {
 		display_results(data, count);
-	} else {
+	} else if (page_id == "add-page") {
 		load_dropdown(data);
+	} else {
+		fill_form();
 	}
 
 	// Play Button
@@ -383,6 +397,33 @@ $(document).ready(function () {
 		input.css("border", "2px solid #ccc"); // Reset input field
 		input.next(".error-message").hide();
 	}
+
+	$("#discardChanges").click(function () {
+		if (confirm("Are you sure you want to discard changes?")) {
+			window.location.href = `/view/${itemData.id}`;
+		}
+	});
+
+	// Optional: Additional validation or handling when submitting the form
+	$("#editForm").submit(function (event) {
+		event.preventDefault();
+
+		let formData = new FormData(this);
+
+		$.ajax({
+			url: $(this).attr("action"),
+			type: "POST",
+			data: formData,
+			processData: false,
+			contentType: false,
+			success: function (response) {
+				window.location.href = response.url; // Redirect to the updated view page
+			},
+			error: function () {
+				alert("There was an error with the submission.");
+			},
+		});
+	});
 });
 
 $(document).on("change", "#existingSong", function () {

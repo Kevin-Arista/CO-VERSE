@@ -1,6 +1,6 @@
 # Kevin Arista Solis (ka2902)
 
-from flask import Flask, render_template, request, Response, jsonify, url_for
+from flask import Flask, render_template, request, Response, jsonify, url_for, redirect
 from urllib.parse import unquote
 import json
 
@@ -148,6 +148,43 @@ def create_cover():
         with open("db.json", "r") as file:
             data = json.load(file)
             return render_template("add.html", data=data)
+
+
+@app.route("/edit/<id>", methods=["GET", "POST"])
+def edit_item(id):
+    with open("db.json", "r") as file:
+        data = json.load(file)
+
+    # Find the item by id
+    item_to_edit = next((item for item in data if item["id"] == id), None)
+
+    if not item_to_edit:
+        return redirect(url_for("home"))  # If no item is found, redirect to home
+
+    if request.method == "POST":
+        # Handle form submission (update the data)
+        item_to_edit["title"] = request.form.get("title", "")
+        item_to_edit["album"] = request.form.get("album", "")
+        item_to_edit["album_cover"] = request.form.get("album_cover", "")
+        item_to_edit["artist"] = request.form.get("artist", "")
+        item_to_edit["genre"] = [
+            genre.strip() for genre in request.form.get("genre", "").split(",")
+        ]
+        item_to_edit["artist_picture"] = request.form.get("artist_picture", "")
+        item_to_edit["audio"] = request.form.get("audio", "")
+        item_to_edit["song_analysis"] = request.form.get("song_analysis", "")
+        item_to_edit["total_streams"] = int(request.form.get("total_streams", 0))
+
+        # Write updated data to the file
+        with open("db.json", "w") as file:
+            json.dump(data, file, indent=4)
+
+        return redirect(
+            url_for("view_id", id=id)
+        )  # Redirect to the view page after saving changes
+
+    # If it's a GET request, pre-populate the form with current item data
+    return render_template("edit.html", item=item_to_edit)
 
 
 if __name__ == "__main__":

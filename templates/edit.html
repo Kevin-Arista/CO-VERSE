@@ -1,0 +1,68 @@
+i{% extends "layout.html" %} {% block body_id %}edit-page{% endblock %} {% block
+content %}
+
+<script
+	type="text/javascript"
+	src="{{ url_for('static', filename='app.js') }}"></script>
+
+<script>
+	let itemData = {{item | tojson}}
+</script>
+
+<h1 class="edit-heading bungee-shade-regular">Edit Song Information</h1>
+
+<div class="edit-container">
+	<form
+		id="editForm"
+		class="edit-form"
+		action="{{ url_for('edit_item', id=item.id) }}"
+		method="POST">
+		<label for="edit-title" class="edit-label">Song Title</label>
+		<input type="text" id="edit-title" name="title" class="edit-input" />
+
+		<label for="edit-artist" class="edit-label">Artist</label>
+		<input type="text" id="edit-artist" name="artist" class="edit-input" />
+
+		<label for="edit-album" class="edit-label">Album</label>
+		<input type="text" id="edit-album" name="album" class="edit-input" />
+
+		<label for="edit-album-cover" class="edit-label">Album Cover URL</label>
+		<input
+			type="text"
+			id="edit-album-cover"
+			name="album_cover"
+			class="edit-input" />
+
+		<label for="edit-streams" class="edit-label">Spotify Streams</label>
+		<input
+			type="number"
+			id="edit-streams"
+			name="total_streams"
+			class="edit-input" />
+
+		<label for="edit-genre" class="edit-label">Genre (separate by comma)</label>
+		<input type="text" id="edit-genre" name="genre" class="edit-input" />
+
+		<label for="edit-audio" class="edit-label">Spotify Audio URL</label>
+		<input type="text" id="edit-audio" name="audio" class="edit-input" />
+
+		<label for="edit-song-analysis" class="edit-label">
+			Song Analysis (300 words max)
+		</label>
+		<textarea
+			id="edit-song-analysis"
+			name="song_analysis"
+			class="edit-input"></textarea>
+
+		<hr />
+
+		<button type="submit" class="edit-button">Submit</button>
+		<button
+			type="button"
+			id="discardChanges"
+			class="edit-button discard-button">
+			Discard Changes
+		</button>
+	</form>
+</div>
+{% endblock %}
