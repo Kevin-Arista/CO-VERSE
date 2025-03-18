@@ -1,8 +1,6 @@
 # Kevin Arista Solis (ka2902)
 
-from flask import Flask
-from flask import render_template
-from flask import Response, request, jsonify
+from flask import Flask, render_template, request, Response, jsonify, url_for
 from urllib.parse import unquote
 import json
 
@@ -78,7 +76,7 @@ def create_cover():
             cover_genre = (request.form.get("cover_genre", "")).split(",")
             cover_audio = request.form.get("cover_audio", "")
             cover = {
-                "id": len(song["covers"]) + 1,
+                "id": str(len(song["covers"]) + 1),
                 "artist": cover_artist,
                 "genre": cover_genre,
                 "audio": cover_audio,
@@ -137,7 +135,14 @@ def create_cover():
             with open("db.json", "w") as file:
                 json.dump(data, file, indent=4)
 
-        return render_template("add.html", data=data)
+        return jsonify(
+            {
+                "url": f"/view/{idEdited}",  # URL to the newly created item
+                "form": render_template(
+                    "form.html", data=data
+                ),  # Send updated form in response
+            }
+        )
 
     else:
         with open("db.json", "r") as file:

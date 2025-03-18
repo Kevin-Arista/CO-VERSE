@@ -250,11 +250,11 @@ $(document).ready(function () {
 	}
 	// Hide error messages initially
 	$(".error-message").hide();
-
-	// Hide error messages initially
-	$(".error-message").hide();
-
 	$("#addForm").submit(function (event) {
+		// Prevent form submission
+		event.preventDefault();
+
+		// Validation flags
 		let isValid = true;
 		let firstInvalidField = null;
 		let selectedSong = $("#existingSong").val(); // Check if an existing song is selected
@@ -334,13 +334,41 @@ $(document).ready(function () {
 
 		// Scroll to the first invalid field if there's an error
 		if (!isValid) {
-			event.preventDefault();
 			firstInvalidField.focus();
 			$("html, body").animate(
 				{ scrollTop: firstInvalidField.offset().top - 100 },
 				500
 			);
+			return; // Don't submit the form if validation fails
 		}
+
+		// If the form is valid, proceed with the AJAX request
+		let formData = new FormData(this); // This will capture all form inputs, including file uploads
+		$.ajax({
+			url: $("#addForm").attr("action"), // Form action URL (POST to /add)
+			type: "POST",
+			data: formData,
+			processData: false, // Important: don't process the data
+			contentType: false, // Important: don't set the content type manually
+			success: function (response) {
+				// If the server responds with a new URL and form HTML, update the page
+				if (response.url) {
+					// Show success message with the link to view the newly created item
+					$("#addSuccessMessage").show();
+					$("#addViewItem").attr("href", response.url); // Set the URL for the newly created item
+				}
+
+				if (response.form) {
+					// Update the form with the new one or with any errors
+					$("#addFormContainer").html(response.form); // Replace the current form
+					$("#addForm")[0].reset(); // Optionally reset the form inputs
+					$("#add-title").focus(); // Focus on the first text input field
+				}
+			},
+			error: function (xhr, status, error) {
+				alert("There was an error with your submission.");
+			},
+		});
 	});
 
 	// Function to show error message and highlight input

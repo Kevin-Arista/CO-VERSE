@@ -11,6 +11,10 @@ content %}
 <h1 class="add-heading bungee-shade-regular">Add a New Song</h1>
 
 <div class="add-container">
+	<div class="add-success-message" id="addSuccessMessage" style="display: none">
+		New song added!
+		<a href="#" class="add-view-link" id="addViewItem">View it here</a>
+	</div>
 	<form
 		id="addForm"
 		class="add-form"
@@ -130,10 +134,5 @@ content %}
 
 		<button type="submit" class="add-button">Submit</button>
 	</form>
-
-	<div class="add-success-message" id="addSuccessMessage" style="display: none">
-		New song added!
-		<a href="#" class="add-view-link" id="addViewItem">View it here</a>
-	</div>
 </div>
 {% endblock %}
